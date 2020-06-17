@@ -1,0 +1,37 @@
+
+html, body{
+	margin:  0;
+	padding: 0;
+}
+
+#banner {
+	background-image: url("./assets/banner.jpg");
+	background-attachment: fixed;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0px;
+}
+
+#banner h1 {
+    font-family: 'Source Sans Pro', sans-serif;	
+    font-size: 3rem;
+	color: #fff;
+	position: relative;
+	font-weight: 700;
+	max-width: 40vw;
+	padding-top: 15%;
+	padding-left: 5%;
+}
+
+#banner h1:after {
+	content: '|';
+	margin-left: 8px;
+	animation: piscar 0.8s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes piscar {
+	0%, 100% {opacity: 1;}
+	50% {opacity: 0;}
+}
