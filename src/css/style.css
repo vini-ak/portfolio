@@ -2,7 +2,12 @@
 html, body{
 	margin:  0;
 	padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;	
+	font-family: 'Source Sans Pro', sans-serif;	
+	overflow-x: hidden;
+}
+
+body {
+	box-sizing: border-box;
 }
 
 #banner {
@@ -12,6 +17,7 @@ html, body{
 	height: 100vh;
 	position: relative;
 	top: 0px;
+	z-index: 3;
 }
 
 #banner h1 {
@@ -71,7 +77,7 @@ html, body{
 	flex-flow: column wrap;
 	top: 30%;
 	left: -25px;
-	z-index: -20;
+	z-index: 2;
 }
 
 #redes-sociais > a {
@@ -128,22 +134,24 @@ h2 {
 	max-width: 30vw;
 	text-align: justify;
 	font-size: 1.2rem;
+	font-weight: 700;
 }
 
 #quem-sou-content > img {
 	max-height: 250px;
-	border: solid 6px #253E53;
+	border: solid 6px #004318;
 }
 
 .projeto {
 	height: 35vh;
-	width: 100%;
+	width: 100vw;
 	margin-bottom: 30px;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 7vw;
+	padding-right: 8vw;
 }
 
 .projeto-descricao {
@@ -162,11 +170,13 @@ h2 {
 
 #projetos > div:nth-child(odd) {
 	background-color: #004318;
+	
 }
 
 .projeto h3 {
 	color: #fff;
 	font-family: 'Roboto', sans-serif;
+	font-size: 1.7rem;
 
 }
 
@@ -178,7 +188,7 @@ h2 {
 	text-align: center;
 	display: flex;
 	flex-flow: column wrap;
-	background: linear-gradient(#fff, #253E53);
+	background: linear-gradient(#316978, #12862f);
 	font-family: 'Roboto', sans-serif;
 	height: 50vh;
 }
@@ -238,16 +248,16 @@ h2 {
   }
   
   [data-anime="left"] {
-	transform: translate3d(-50px, 0, 0);
+	transform: translate3d(-7vw, 0, 0);
   }
   
   [data-anime="right"] {
-	transform: translate3d(50px, 0, 0);
+	transform: translate3d(7vw, 0, 0);
   }
   
   [data-anime].animate {
 	opacity: 1;
-	transform: translate3d(0px, 0px, 0px);
+	transform: translate3d(0, 0, 0);
   }
 
 

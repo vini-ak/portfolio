@@ -14,19 +14,13 @@ const menu = () => {
 
     if (!menu.classList.contains('blue') && window.pageYOffset > (screen.height * 0.75)) {
         menu.classList.add('blue')
-    } 
-}
-
-const redesSociais = () => {
-    const redesSociais = document.querySelector('#redes-sociais')
-
-    if (window.pageYOffset > (screen.height * 0.8)) {
-        redesSociais.style.zIndex = "2"
+    } else if (menu.classList.contains('blue') && window.pageYOffset <= (screen.height * 0.75)) {
+        menu.classList.remove('blue')
     }
 }
 
 const dataAnime = (elementosAnimados) => {
-    const windowTop = window.pageYOffset + (screen.height * 0.8) 
+    const windowTop = window.pageYOffset + (screen.height * 0.7) 
 
     elementosAnimados.forEach(elemento => {
         if (windowTop > elemento.offsetTop) {
@@ -42,7 +36,6 @@ function scroll() {
 
     document.addEventListener('scroll', () => {
         menu()
-        redesSociais()
         dataAnime(elementosAnimados)
     })
     
