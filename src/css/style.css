@@ -184,13 +184,24 @@ h2 {
 	color: #ccc;
 }
 
+#contato {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 5vw;
+	background: linear-gradient(#fff, #253E53);
+	padding: 10vh 5vw;
+}
+
+#contato h2 {
+	margin-bottom: 40px;
+}
+
 #contato-conteudo {
 	text-align: center;
 	display: flex;
 	flex-flow: column wrap;
-	background: linear-gradient(#316978, #12862f);
 	font-family: 'Roboto', sans-serif;
-	height: 50vh;
+	justify-content: space-between;
 }
 
 #contato-imagens {
@@ -199,33 +210,29 @@ h2 {
 	flex-flow: row wrap;
 	justify-content: space-evenly;
 	align-items: center;
+	margin-bottom: 3vh;
 }
 
 #contato-imagens img {
-	max-height: 30vh;
-}
-
-#contato-imagens img:nth-child(2) {
 	max-height: 15vh;
 }
 
-#contato-github {
-	margin-top: 40px;
+#contato-imagens img:nth-child(2) {
+	max-height: 8vh;
 }
 
-#contato-github p{
+
+
+#contato-github p {
 	margin-bottom: 0;
-	font-weight: 400;
-	color: white;
+	font-weight: 500;
+	color: #fff;
 }
 
-#contato-github a {
+#contato-github > a {
 	text-decoration: none;
 	color: #ACFFB4;
-}
-
-#contato-github a:hover {
-	border-bottom: solid 5px #ACFFB4;
+	font-size: 1rem;
 }
 
 #rodape {
@@ -241,6 +248,43 @@ h2 {
 	color: #333;
 	margin-block-start: 0em;
 }
+
+.input-form {
+	display: flex;
+	flex-flow: column wrap;
+	margin: 0.8em 0;
+}
+
+.botao-form {
+	background-color: #ACFFB4;
+	font-family: 'Roboto';
+	padding: 0 50px;
+	margin-top: 0.4em;
+}
+
+input, textarea, .botao-form {
+	border-radius: 5px;
+	border-color: transparent;
+	outline: none;
+}
+
+input:focus, textarea:focus {
+	border: solid 2px #12862f;
+}
+
+input, textarea, label {
+	transition: 0.4 ease;
+	
+}
+
+label {
+	margin-bottom: 0.1rem;
+}
+
+.botao-form:hover {
+	background-color: #72b679;
+}
+
 
 [data-anime] {
 	opacity: 0;
@@ -272,3 +316,13 @@ h2 {
 	50% {opacity: 0;}
 }
 
+@media(max-width: 579px) {
+	#contato {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	#contato-email {
+		margin-top: 3em;
+	}
+}
