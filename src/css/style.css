@@ -271,6 +271,7 @@ input, textarea, .botao-form {
 	border-radius: 5px;
 	border-color: transparent;
 	outline: none;
+	border-width: 2px;
 }
 
 
@@ -294,9 +295,7 @@ label {
 	color: #777777;
 }
 
-textarea {
-	border-width: 2px;
-}
+
 .botao-form:hover, .botao-form:active {
 	background-color: #72b679;
 	outline: none;
@@ -330,7 +329,6 @@ input:focus + label, textarea:focus + label {
 	opacity: 1;
 	transform: translate3d(0, 0, 0);
   }
-
 
 
 /*
