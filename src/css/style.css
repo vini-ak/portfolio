@@ -249,17 +249,22 @@ h2 {
 	margin-block-start: 0em;
 }
 
+#contato-email h2 {
+	margin-bottom: 80px;
+}
+
 .input-form {
+	position: relative;
 	display: flex;
 	flex-flow: column wrap;
-	margin: 0.8em 0;
+	margin: 1.4em 0;
 }
 
 .botao-form {
 	background-color: #ACFFB4;
 	font-family: 'Roboto';
-	padding: 0 50px;
-	margin-top: 0.4em;
+	width: 30%;
+	margin-top: 10px;
 }
 
 input, textarea, .botao-form {
@@ -268,23 +273,45 @@ input, textarea, .botao-form {
 	outline: none;
 }
 
+
+input, textarea, label {
+	transition: 0.4 ease;
+}
+
+h2 img {
+	max-width: 2rem;
+	padding-bottom: 7px;
+}
+
+label {
+	position: absolute;
+	top: 0;
+	left: 5px;
+	pointer-events: none;
+	display: block;
+	transition: 0.5s;
+	font-family: 'Roboto', sans-serif;
+	color: #777777;
+}
+
+textarea {
+	border-width: 2px;
+}
+.botao-form:hover, .botao-form:active {
+	background-color: #72b679;
+	outline: none;
+}
+
 input:focus, textarea:focus {
 	border: solid 2px #12862f;
 }
 
-input, textarea, label {
-	transition: 0.4 ease;
-	
+input:focus + label, textarea:focus + label {
+	transform: translateY(-23px);
+	color: #fff;
+	font-size: 14px;
+	font-weight: 500;
 }
-
-label {
-	margin-bottom: 0.1rem;
-}
-
-.botao-form:hover {
-	background-color: #72b679;
-}
-
 
 [data-anime] {
 	opacity: 0;
