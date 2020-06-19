@@ -305,7 +305,7 @@ input:focus, textarea:focus {
 	border: solid 2px #12862f;
 }
 
-input:focus + label, textarea:focus + label {
+input:focus + label, textarea:focus + label, input:valid + label, textarea:valid + label {
 	transform: translateY(-23px);
 	color: #fff;
 	font-size: 14px;
