@@ -41,6 +41,18 @@ function scroll() {
     
 }
 
+function hoverLink() {
+    document.querySelector("#github-link > a").onmouseenter = () => {
+        console.log('dento')
+        document.querySelector("#github-link > span").style.transform = "translateX(0px)"
+    }
+
+    document.querySelector('#github-link').onmouseout = () => {
+        document.querySelector("#github-link > span").style.transform = "translateX(-100px)"
+    }
+}
+
 let h1 = document.querySelector('#banner h1')
 digitador(h1)
 scroll()
+hoverLink()

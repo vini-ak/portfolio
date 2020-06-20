@@ -125,9 +125,10 @@ h2 {
 
 #quem-sou-content {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row-reverse wrap;
 	align-items: center;
 	justify-content: space-evenly;
+	padding: 0 7vw;
 }
 
 #quem-sou-content > p {
@@ -139,7 +140,9 @@ h2 {
 
 #quem-sou-content > img {
 	max-height: 250px;
-	border: solid 6px #004318;
+	border-radius: 50%;
+	border: solid 5px #081A26
+	
 }
 
 .projeto {
@@ -222,6 +225,12 @@ h2 {
 }
 
 
+#contato-github {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
 #contato-github p {
 	margin-bottom: 0;
@@ -229,11 +238,32 @@ h2 {
 	color: #fff;
 }
 
-#contato-github > a {
+#github-link {
+	display: flex;
+	flex-flow: column wrap;
+	max-width: 35%;
+	align-items: flex-start;
+	overflow: hidden;
+}
+
+#github-link > a {
 	text-decoration: none;
 	color: #ACFFB4;
 	font-size: 1rem;
 }
+
+#github-link > span {
+	width: 40%;
+	height: 3px;
+	background-color: #ACFFB4;
+	transform: translateX(-100px);
+	transition: 0.9s;
+}
+
+.revelar {
+	transform: translateX(10px);
+}
+
 
 #rodape {
 	background-color: #316978;
@@ -245,7 +275,7 @@ h2 {
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 	font-weight: bold;
-	color: #333;
+	color: #111;
 	margin-block-start: 0em;
 }
 
