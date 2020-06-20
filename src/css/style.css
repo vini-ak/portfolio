@@ -171,9 +171,16 @@ h2 {
 	flex-direction: row-reverse;
 }
 
+#projetos > div:nth-child(even) > .imagem-projeto {
+	background-color: #31c740;
+}
+
 #projetos > div:nth-child(odd) {
 	background-color: #004318;
-	
+}
+
+#projetos > div:nth-child(odd) > .imagem-projeto {
+	background-color: #316978;
 }
 
 .projeto h3 {
@@ -185,6 +192,11 @@ h2 {
 
 .projeto p {
 	color: #ccc;
+}
+
+.imagem-projeto {
+	width: 200px;
+	height: 100px;
 }
 
 #contato {
@@ -260,10 +272,6 @@ h2 {
 	transition: 0.9s;
 }
 
-.revelar {
-	transform: translateX(10px);
-}
-
 
 #rodape {
 	background-color: #316978;
@@ -304,6 +312,9 @@ input, textarea, .botao-form {
 	border-width: 2px;
 }
 
+input, textarea {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 input, textarea, label {
 	transition: 0.4 ease;
@@ -371,13 +382,84 @@ input:focus + label, textarea:focus + label, input:valid + label, textarea:valid
 	50% {opacity: 0;}
 }
 
+
+/*
+ * MEDIA QUERIES
+ */
+
+@media(max-width: 1400px) and (orientation: portrait) {
+	#banner {
+		height: 70vh;
+	}
+
+	#banner h1 {
+		padding-top: 30%;
+	}
+	
+	#github-link {
+		margin-top: 10px;
+		max-width: 100%;
+	}
+
+	#contato-imagens img{
+		max-width: 10vw;
+	}
+}
+
 @media(max-width: 579px) {
+
+	#banner {
+		height: 100vh;
+	}
+
+	#banner > h1 {
+		width: 100vw;
+		font-size: 1.7rem;
+		margin-block-end: 0%;
+		padding-top: 60%;
+	}
+
+	#redes-sociais {
+		display: none;
+	}
+
+	#quem-sou-content > p {
+		max-width: 80%;
+	}
+
+	#quem-sou-content > img {
+		max-height: 200px;
+		margin-top: 4vh;
+	}
+
 	#contato {
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(2, 1fr);
 	}
 
+	#contato-github > p {
+		color: #333;
+	}
+
 	#contato-email {
 		margin-top: 3em;
+	}
+
+	#contato-email > i {
+		color: #fff;
+	}
+
+	#contato-conteudo {
+		justify-content: space-around;
+	}
+
+	#contato-imagens img{
+		max-width: 25vw;
+	}
+
+	.botao-form {
+		width: 40%;
+		justify-self: center;
+		margin: 0 30%;
 	}
 }

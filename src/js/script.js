@@ -43,7 +43,6 @@ function scroll() {
 
 function hoverLink() {
     document.querySelector("#github-link > a").onmouseenter = () => {
-        console.log('dento')
         document.querySelector("#github-link > span").style.transform = "translateX(0px)"
     }
 
