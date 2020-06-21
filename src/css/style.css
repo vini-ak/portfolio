@@ -392,6 +392,10 @@ input:focus + label, textarea:focus + label, input:valid + label, textarea:valid
 	#banner {
 		background-image: url("./assets/banner-lg.jpg");
 	}
+
+	#banner h1 {
+		max-width: 30vw;
+	}
 }
 
 
