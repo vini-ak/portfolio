@@ -387,6 +387,18 @@ input:focus + label, textarea:focus + label, input:valid + label, textarea:valid
  * MEDIA QUERIES
  */
 
+
+@media(min-width: 1441px) and (max-width: 1920px) {
+	#banner {
+		background-image: url("./assets/banner-lg.jpg");
+	}
+
+	#banner h1 {
+		max-width: 30vw;
+	}
+}
+
+
 @media(max-width: 1400px) and (orientation: portrait) {
 	#banner {
 		height: 70vh;
