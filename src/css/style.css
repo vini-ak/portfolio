@@ -298,18 +298,21 @@ h2 {
 	margin: 1.4em 0;
 }
 
+input, textarea {
+	border-radius: 5px;
+	border-color: transparent;
+	outline: none;
+	border-width: 2px;
+}
+
 .botao-form {
 	background-color: #ACFFB4;
 	font-family: 'Roboto';
 	width: 30%;
 	margin-top: 10px;
-}
-
-input, textarea, .botao-form {
-	border-radius: 5px;
-	border-color: transparent;
-	outline: none;
-	border-width: 2px;
+	height: 6vh;
+	border-radius: 45px;
+	transition: 0.4s;
 }
 
 input, textarea {
@@ -338,12 +341,9 @@ label {
 
 
 .botao-form:hover, .botao-form:active {
-	background-color: #72b679;
+	background-color: #12862f;
+	color: white;
 	outline: none;
-}
-
-input:focus, textarea:focus {
-	border: solid 2px #12862f;
 }
 
 input:focus + label, textarea:focus + label, input:valid + label, textarea:valid + label {
