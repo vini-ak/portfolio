@@ -5,29 +5,30 @@ const app = express()
 
 const bodyParser = require('body-parser')
 
+const port = 8080 
 app.use(bodyParser.urlencoded({ extended: true}))
 
 // POST route from contact form
 app.post('/formulario', (req, res) => {
-
+    console.log(req.body)
     // Instantiate the SMTP server
     let transporter = nodemailer.createTransport({
 
       host: "smtp.gmail.com",
       port: 587,
       auth: {
-          user: "meu email",
-          pass: "minha senha"
+          user: 'meu email',
+          pass: 'minha senha'
       }
     });
     
     let mailInfo = {
-        from: 'vini <meu email>',
+        from: 'vini <meu email',
         to: "vinicius.vieira@seedabit.org.br",
-        replyTo: "vinicius.vdes@gmail.com",
+        replyTo: "meu email",
         subject: "Portfolio",
         text: `${req.body.email}: ${req.body.nome} said: ${req.body.mensagem}`,
-        html: "<b>Hello world?</b>", // html body
+        html: `<b>${req.body.email}: ${req.body.nome} said: ${req.body.mensagem}</b>`, // html body
     }
     
     transporter.sendMail(mailInfo, (error, info) => {
@@ -38,11 +39,14 @@ app.post('/formulario', (req, res) => {
     })
 
     res.send({
-      val: true
+      nome: req.body.nome,
+      email: req.body.email,
+      msg: req.body.mensagem
     })
   })
 
-app.listen(3003, () => {
-  console.log(`Servidor executando na porta 3003`)
+
+app.listen(port, () => {
+  console.log(`Servidor executando na porta ${port}`)
 })
 
